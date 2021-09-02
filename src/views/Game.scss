@@ -1,0 +1,116 @@
+.game{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    .gameNavigation {
+        background-color: rgba(0, 0, 0, 0.15);
+        margin-bottom: 20px;
+        padding: 30px 150px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        &__level {
+            color: var(--color-paraText);
+        }
+        &__back {
+            color: var(--color-paraText);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    .gameGrid {
+        width: 60%;
+        max-height: 60%;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        flex-grow: 1;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+
+
+        .gameBTN {
+
+            &:first-of-type{
+                background-color: whitesmoke;
+            }
+            &:nth-of-type(2) {
+                background-color: green;
+            }
+            &:nth-of-type(3) {
+                background-color: blue;
+            }
+            &:nth-of-type(4) {
+                background-color: purple;
+            }
+            &:nth-of-type(5) {
+                background-color: yellow;
+            }
+            &:nth-of-type(6) {
+                background-color: orange;
+            }
+            &:nth-of-type(7) {
+                background-color: cyan;
+            }
+            &:nth-of-type(8) {
+                background-color: pink;
+            }
+            &:nth-of-type(9) {
+                background-color: red;
+            }
+        }
+    }
+    .userSelection {
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__heading {
+            color: var(--color-headingText);    
+            font-family: var(--fontstyle-heading);
+        }
+
+        .userSelectionSteps {
+            display: flex;
+            gap: 10px;
+            .userSelectionStep {
+                display: block;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+}
+.message {
+    background-color: rgba(0, 0, 0, 0.671);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    gap: 20px;
+    div {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        button {
+            background-color: var(--color-startMenuBTN);
+            padding: 10px 0;
+            padding: 5px 10px;
+            color: var(--color-paraText);
+        }
+    }
+}

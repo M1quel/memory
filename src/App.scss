@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+
+.wrapper {
+  background-color: var(--backgroundColor-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  --fontstyle-para: 'Montserrat', sans-serif;
+  --fontstyle-heading: 'Bubblegum Sans', cursive;
+}
+
+
+
+
+
+
+
+//themes
+#theme-blue {
+  --backgroundColor-main: rgb(149, 149, 255);
+  --color-headingText: rgb(255, 255, 255);
+  --color-startMenuBTN: rgb(52, 52, 255);
+  --color-paraText: white;
+}
+#theme-green {
+  --backgroundColor-main: rgb(149, 255, 149);
+  --color-headingText: black;
+  --color-startMenuBTN: rgb(0, 126, 0);
+  --color-paraText: white;
+}
+#theme-light {
+  --color-headingText: rgb(66, 66, 66);
+  --color-startMenuBTN: rgb(167, 167, 167);
+  --color-paraText: white;
+  --backgroundColor-main: rgb(233, 233, 233);
+
+}
+#theme-dark {
+  --backgroundColor-main: rgb(51, 51, 51);
+  --color-headingText: rgb(212, 212, 212);
+  --color-startMenuBTN: rgb(27, 27, 27);
+  --color-paraText: rgb(189, 189, 189);
+
+}

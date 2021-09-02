@@ -1,0 +1,182 @@
+.startMenu {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    &__heading {
+        font-size: 50px;
+        color: var(--color-headingText);
+        font-family: var(--fontstyle-heading);
+    }
+
+    &__btn {
+        color: var(--color-paraText);
+        font-family: var(--fontstyle-para);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &Heading {
+            color: var(--color-paraText);
+            cursor: pointer;
+            transition: width .5s;
+            width: 150px;
+            background-color: var(--color-startMenuBTN);
+            padding: 5px 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+
+        }        
+    }
+
+    .startMenuOptions {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: fit-content;
+        transition: .5s;
+        
+        #optionCheck {
+            display: none;
+
+            &:checked ~ .startMenuOptions__content{
+                padding: 10px;
+                height: 150px;
+                width: 300px;
+                visibility: visible;
+            }
+            &:checked ~ .startMenu__btnHeading {
+                width: 300px;
+            }
+        }
+        
+        &__content {
+            z-index: 10000;
+            transition: .5s;
+            padding: 0;
+            background-color: var(--color-startMenuBTN);
+            height: 0px;
+            position: absolute;
+            top: 100%;
+            width: 150px;
+            overflow: hidden;
+            visibility: hidden;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            .brightnessSelector {
+                display: flex;
+                margin-top: 10px;
+            }
+            .colorScheme {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__heading {
+                    color: var(--color-paraText);
+                    font-family: var(--fontstyle-para);
+                    font-size: 17px;
+                    margin-bottom: 10px;
+                }
+                .colorThemes {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    justify-items: center;
+                    width: 100%;
+                    span {
+                        cursor: pointer;
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        display: block;
+                        &:first-of-type {
+                            background-color: rgb(0, 192, 0);
+                        }
+                        &:nth-of-type(2) {
+                            background-color: rgb(0, 0, 192);
+                        }
+                        &:nth-of-type(3) {
+                            background-color: rgb(192, 192, 192);
+                        }
+                        &:nth-of-type(4) {
+                            background-color: rgb(59, 59, 59);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .startMenuConfig {
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: fit-content;
+        transition: .5s;
+        
+        #configCheck {
+            display: none;
+
+            &:checked ~ .startMenuConfig__content{
+                padding: 10px;
+                height: 200px;
+                width: 500px;
+                visibility: visible;
+            }
+            &:checked ~ .startMenu__btnHeading {
+                width: 500px;
+            }
+        }
+        
+        &__content {
+            transition: .5s;
+            padding: 0;
+            background-color: var(--color-startMenuBTN);
+            height: 0px;
+            position: absolute;
+            top: 100%;
+            width: 150px;
+            overflow: hidden;
+            visibility: hidden;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+
+
+            .configForm {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: ". ." ". saveConfig" "save save";
+                width: 80%;
+                margin: 0 auto;
+                gap: 20px;
+                height: 100%;
+
+                .saveConfig {
+                    grid-area: saveConfig;
+                }
+                input {
+                    padding: 0 10px;
+                    width: 100%;
+                    background-color: rgb(228, 228, 228);
+                    color: black;
+                }
+
+                button[type=submit] {
+                    grid-area: save;
+                    width: fit-content;
+                    margin: 0 auto;
+                }
+            }
+
+
+        }
+    }
+}
