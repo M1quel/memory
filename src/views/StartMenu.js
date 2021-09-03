@@ -160,7 +160,7 @@ export default function Startmenu(props) {
     return (
         <>
             <div className="startMenu">
-                <p className="">{props.highscoreState.highscore ? `Din nuværende highscore: ${props.highscoreState.highscore}` : "Du har endnu ikke en highscore"}</p>
+                <p className="highscore">{props.highscoreState.highscore ? `Din nuværende highscore: ${props.highscoreState.highscore}` : "Du har endnu ikke en highscore"}</p>
                 <h1 className="startMenu__heading">Velkommen til memory</h1>
                 <Link to="/game" className="startmenuSectionHeading startMenu__btn"><h1 className="startMenu__btnHeading">Start Spil</h1></Link>
                 <div className="startMenuOptions startMenu__btn">

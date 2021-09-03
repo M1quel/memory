@@ -12,9 +12,13 @@
         width: 100%;
         &__level {
             color: var(--color-paraText);
+            font-family: var(--fontstyle-para);
+
+            
         }
         &__back {
             color: var(--color-paraText);
+            font-family: var(--fontstyle-para);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -92,6 +96,7 @@
 .message {
     background-color: rgba(0, 0, 0, 0.671);
     height: 100vh;
+    font-family: var(--fontstyle-para);
     width: 100vw;
     position: absolute;
     color: white;
@@ -109,6 +114,7 @@
         button {
             background-color: var(--color-startMenuBTN);
             padding: 10px 0;
+            font-family: var(--fontstyle-para);
             padding: 5px 10px;
             color: var(--color-paraText);
         }
